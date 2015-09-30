@@ -15,5 +15,11 @@
   <%= @club.open_membership %>
 </p>
 
+<ul>
+<% @club.users.each do |user| %>
+<li><%= user.first_name %><%= user.last_name %></li>
+</ul>
+
+
 <%= link_to 'Edit', edit_club_path(@club) %> |
 <%= link_to 'Back', clubs_path %>
